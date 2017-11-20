@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{ int n,i;
+int mul=1;
+printf("enter a no");
+scanf("%d",&n);
+for(i=n;i>0;i--)
+{
+mul=mul*i;
+
+}
+printf("factorial is=%d",mul);
+return 0;
+}
