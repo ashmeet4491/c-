@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<malloc.h>
+typedef struct node{
+int data;
+struct node *next
+}NODE;
+void main(){
+NODE *head,*p;
+int n,x,j,i;
+printf("enter the no of elements to be inserted");
+scanf("%d",&n);
+// get the first node with its adderess head
+head=(NODE*)malloc(sizeof(NODE));
+scanf("%d",&(head->data));
+head->next=NULL;
+// head points to the first node hwereas p points to the last node
+p=head;
+// in case of single node 1st and last nodes are the same;
+//inserting the remaining nodes
+for(i=1;i<=n;++i){
+p->next=(NODE*)malloc(sizeof(NODES));
+p=p->next;
+p->=NULL;
+scanf("%d",&(p->data));
+}
+}
+
+
+
