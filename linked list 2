@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<malloc.h>
+#include<stdlib.h>
+typedef struct node
+{
+
+      int data;
+      struct node *next;
+}
+        NODE;
+
+
+void main
+{
+NODE *head,*p,*q;
+int n,x,j,i;
+printf("enter the no of element u want to enter");
+scanf("%d",&n)
+head=(NODE*)malloc(sizeof(NODE));
+scanf("%d",&(head->data));
+head->next=NULL;
+p=q=head;
+for(i=1;i<n;++i)
+{
+p->next=(NODE*)malloc(sizeof(NODE));
+p=p->next;
+p->next=NULL;
+}
+for(i=1;i<=n;++i)
+{
+printf("%d",(q->data));
+q=q->next;
+
+}
+
+
+
+
+
+}
