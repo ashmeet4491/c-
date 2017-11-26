@@ -1,0 +1,21 @@
+#include<stdio.h>
+  int stk[100],top=-1;
+  void push()
+
+{
+  int item;
+  printf("enter the element u want to enter");
+  scanf("%d",&item);
+  stk[++top]=item;
+}
+  int main()
+{
+  int n;
+  printf("enter max no of elements in a stack");
+  scanf("%d",&n);
+  if(top==n-1)
+  printf("stack is full");
+else
+  push();
+  printf("%d",stk[top]);
+}
