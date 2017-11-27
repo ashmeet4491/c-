@@ -1,0 +1,41 @@
+#include<stdio.h>
+int stk[5],top=-1,n;
+void pop()
+{int j;
+if(top==-1)
+printf("the stack is empty");
+else
+{
+for(j=0;j<=n;j++)
+{top--;
+printf("%d",stk[top]);
+}
+}
+
+}
+void push()
+{
+int i;
+printf("enter the max no of enteries in stack");
+scanf("%d",&n);
+printf("enter the entry u want to enter");
+scanf("%d",&item);
+if(top==n-1);
+printf("the stack is full");
+else
+{
+for(i=0;i<=n;++i){
+stk[++top]=item;
+
+}
+printf("the value of %d is %d",top,item);
+}
+
+
+}
+int main()
+{
+push();
+pop();
+return 0;
+}
