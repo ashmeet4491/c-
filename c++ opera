@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+void display(const char*);
+int main()
+{
+char *ch1="hello";
+display(char *p);
+}
+void display(char *p)
+{
+cout<<p<<endl;
+}
