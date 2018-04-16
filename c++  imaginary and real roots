@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+struct complex
+{
+double real;
+double imaginary;
+};
+complex complex_set(double r,double i);
+complex complex_add(double r,double i);
+int main()
+{
+complex a,b,c;
+a=complex_set(1.0,2.0);
+// here we cannot use, complex_set(1.0,2.0); and a=temp;
+//because it will return 0+0i
+cout<<a.real<<"+"<<a.imaginary+"i"<<endl;
+b=complex_set(2.0,2.0);
+cout<<b.real<<"+"<<b.imaginary<<endl;
+c=complex_add(a,b)
+cout<<c.real<<"+"<<c.imaginary<<"i"<<endl
+}
+complex complex_set(double r,double i)
+{
+temp.real=r;
+temp.imaginary=i;
+return temp;
+}
+complex complex_add(complex c1,complex c2)
+{
+temp.real=c1.real+c2.real;
+temp.imaginary=c1.imaginary+c2.imaginary;
+return temp;
+}
