@@ -12,7 +12,7 @@ int main()
 complex a,b,c;
 a=complex_set(1.0,2.0);
 // here we cannot use, complex_set(1.0,2.0); and a=temp;
-//because it will return 0+0i
+//because it will return 0+0i because temp is not declared in this main function.
 cout<<a.real<<"+"<<a.imaginary+"i"<<endl;
 b=complex_set(2.0,2.0);
 cout<<b.real<<"+"<<b.imaginary<<endl;
