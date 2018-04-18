@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+struct complex
+{
+double real,imag;
+}temp;
+complex complex_set(double i,double r);
+complex operator+(complex c1,complex c2);
+complex operator-(complex c1,complex c2);
+int main()
+{
+complex a,b,c,d;
+a=complex_set(1.0,2.0);
+cout<<a.real<<" "+<<a.imag<<endl;
+
+}
+complex complex_set(double i,double r)
+{
+temp.real=r;
+temp.imag=i;
+return temp;
+}
+complex operator+(complex c1,complex c2)
+{
+temp.real=c1.real+c2.real;
+temp.imag=c1.real+c2.real,
+return temp;
+}
+complex operator-(complex c1,complex c2)
+{
+temp.real=c1.real-c2.real;
+temp.imag=c1.real-c2.rel;
+return temp;
+}
