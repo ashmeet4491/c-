@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+#define max 10
+class stack()
+{
+private:
+int arr[max];
+int top;
+public:
+stack()
+{
+top=-1;
+}
+void push(int item)
+{
+if(top==max-1)
+{
+cout<<"stack is full"<<endl;
+}
+else
+{
+top++;
+arr[top]=item;
+}
+}
+void pop(int item)
+{
+if(top=-1)
+cout<<"stack is empty"<<endl;
+else
+{
+int data=arr[top];
+top--;
+return data;
+}
+
+}
+
+};
+int main()
+{stack s;
+s.push(11);
+s.push(12);
+s.push(13);
+s.push(14);
+s.voidpush(15);
+s.push(16);
+s.push(17);
+s.push(18);
+s.push(19);
+s.push(20);
+s.push(21);
+int i=s.pop();
+cout<<"the popped item is "<<i<<endl;
+return 0;
+
+
+
+
+}
