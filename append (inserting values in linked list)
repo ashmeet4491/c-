@@ -1,0 +1,57 @@
+//the private member of the class can be accesesd inderectly through the public  member function of that class
+#include<iostream>
+using namespace std;
+class linklist
+{
+private:
+struct node
+{
+int data;
+node *link;
+}*p;
+//p stores the address
+public:
+linklist();//constructor,its compulsory to declare the constructor and destructor it outside the class
+void append(int num);
+
+
+};
+linklist::linklist()
+{
+p=NULL;//header node
+}
+void linklist::append(int num)
+{
+node *q;
+if(p==NULL)
+{
+p=new node;
+p->data=num;
+p->link=NULL;
+}
+else
+{
+q=p;
+while(q->link!=NULL)
+{
+q=q->link;
+}
+t=new node;
+t->data=num;
+t->link=NULL;
+q->link=t;
+
+
+}
+
+}
+int main()
+{linklist ll;//here calling of constructor and destructor
+ll.append(11);
+ll.append(12);
+ll.append(13);
+ll.append(14);
+ll.append(15);
+ll.append(16);
+return 0;
+}
