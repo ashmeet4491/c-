@@ -14,6 +14,7 @@ public:
 linklist();
 void addatbegining(int num);//constructor,its compulsory to declare the constructor and destructor it outside the class
 void append(int num);
+int count();
 
 
 };
@@ -48,16 +49,30 @@ q->link=t;
 }
 
 
-void addatbegining(int num);//adding the nodes at the begining
+void linklist:: addatbegining(int num);//adding the nodes at the begining
 {node *q;
 q->data=num;
 q->link=p;//saying that the address of q has address of p
 p=q;//now th header node is again p
 }
 
+int linklist::count()
+{
+node *q;
+int c=0;//here initiasilizing the value of c  to 0 is neccessary
+q=p;
+while(q->link!=NULL)
+{
+c++;
+q=q->link;
+return c;
+}
+}
+
 
 int main()
 {linklist ll;//here calling of constructor and destructor
+int a;
 ll.append(11);
 ll.append(12);
 ll.append(13);
@@ -66,7 +81,8 @@ ll.append(15);
 ll.append(16);
 ll.addatbegining(100);
 ll.addatbegining(105);
-
+a=ll.count();
+cout<<"the no of nodes in this is"<<a;
 
 return 0;
 }
