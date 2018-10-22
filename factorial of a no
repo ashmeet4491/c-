@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+
+int main()
+{
+    int a,arr[100],b,i,j;
+    int fact=1;
+    cout<<"enter the test cases";
+    cin>>a;
+    if(a>=1 && a<=100){
+    for(i=0;i<a;++i)
+    {
+        cin>>arr[i];
+        
+    }
+    for(i=0;i<a;++i){
+    for(j=arr[i];j>0;--j){
+        if(j>=1 && j<=100){
+        fact=fact*j;
+        }   
+    }
+    cout<<fact<<"\n";
+    fact=1;
+
+    }
+}
+}
