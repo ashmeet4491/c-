@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+int main()
+{ int n,i,sca[100],scb[100],lead[100],ro[100],max,index,j;
+    cout<<"enter total no of rounds";
+    cin>>n;
+    for(i=0;i<n;++i)
+    {
+        cin>>sca[i]>>scb[i];
+        if(sca[i]>scb[i]){
+            ro[i]=1;
+         lead[i]=sca[i]-scb[i];
+        }
+        else{
+        lead[i]=scb[i]-sca[i];
+        ro[i]=2;
+        }
+    }
+    for(j=0;j<n;++j)
+    {
+        if (lead[j]!=lead[j+1])
+        {
+            j=j+1;
+        }
+    }
+    if(j>0){
+    for(i=0;i<n;++i){
+    max=lead[0];
+    for(i=1;i<n;++i)
+    {
+    if(max<lead[i])
+    {
+       max=lead[i]; 
+       
+    }    
+    }
+    for(i=0;i<n;++i)
+    {
+       if(max==lead[i])
+       {
+         index=i;  
+       } 
+    }
+    cout<<ro[index]<<" "<<max;
+    
+    }
+    }
+    else
+    cout<<"no winner";
+    return 0;
+}
