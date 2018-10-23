@@ -1,0 +1,17 @@
+include<iostream>
+using namespace std;
+int i,a,arr[10000],brr[10000],r[10000];
+int main()
+{
+    cout<<"enter the test cases";
+    cin>>a;
+    for(i=0;i<a;++i)
+    {
+    cin>>arr[i]>>brr[i];
+    r[i]=arr[i]%brr[i];
+    }
+    for(i=0;i<a;++i){
+    cout<<r[i]<<"\n";
+    }
+    return 0;
+}
